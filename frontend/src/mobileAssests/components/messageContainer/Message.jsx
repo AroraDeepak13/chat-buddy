@@ -1,7 +1,7 @@
 import React from 'react'
-import {useAuthContext}  from "../../context/AuthContext.jsx"
-import useConversation from '../../zustand/useConversation.js';
-import { extractTime } from '../../utils/extractTime.js';
+import {useAuthContext}  from "../../../context/AuthContext.jsx"
+import useConversation from '../../../zustand/useConversation.js';
+import { extractTime } from '../../../utils/extractTime.js';
 
 const Message = ({message}) => {
   const {authUser} = useAuthContext();

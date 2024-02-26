@@ -1,8 +1,8 @@
 import React, {useEffect,  useRef } from 'react'
 import Message from './Message.jsx'
-import useGetMessages from '../../hooks/useGetMessages.js'
-import MessageSkeleton from '../skeletons/MessageSkeleton.jsx'
-import useListenMessages from '../../hooks/useListenMessages.js'
+import useGetMessages from '../../../hooks/useGetMessages.js'
+import MessageSkeleton from '../../../components/skeletons/MessageSkeleton.jsx'
+import useListenMessages from '../../../hooks/useListenMessages.js'
 
 const Messages = () => {
   const {loading, messages} = useGetMessages()
@@ -30,7 +30,7 @@ const Messages = () => {
     {loading && [...Array(3)].map((_,idx)=> <MessageSkeleton key = {idx} />)}
 
     {!loading && messages.length === 0 &&
-    <p className='text-center'>Send a message to start the conversation</p>
+    <p className='text-center mt-80'>Send a message to start the conversation</p>
     }
 
     </div>
@@ -40,29 +40,5 @@ const Messages = () => {
 export default Messages
 
 
-// import React from 'react'
-// import Message from './Message.jsx'
 
-// const Messages = () => {
-//   return (
-//     <div className='px-4 flex-1 overflow-auto'>
-//     <Message />
-//     <Message />
-//     <Message />
-//     <Message />
-//     <Message />
-//     <Message />
-//     <Message />
-//     <Message />
-//     <Message />
-//     <Message />
-//     <Message />
-//     <Message />
-//     <Message />
-      
-//     </div>
-//   )
-// }
-
-// export default Messages
 
